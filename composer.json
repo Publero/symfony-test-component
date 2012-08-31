@@ -1,0 +1,31 @@
+{
+    "name": "publero/test",
+    "type": "library",
+    "description": "Publero Test Component",
+    "keywords": ["test"],
+    "homepage": "https://github.com/Publero/symfony-test-component",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tomáš Pecsérke",
+            "email": "tomas.pecserke@publero.com"
+        },
+        {
+            "name": "Jiří Horký",
+            "email": "jiri.horky@publero.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "doctrine/doctrine-bundle": "1.0.*",
+        "doctrine/orm": ">=2.2,<2.4-dev",
+        "symfony/framework-bundle": "2.1.*",
+        "symfony/translation": "2.1.*",
+        "symfony/yaml": "2.1.*"
+    },
+    "autoload": {
+        "psr-0": { "Publero\\Component\\Test": "src/" }
+    },
+    "target-dir": "Publero/Component/Test",
+    "minimum-stability": "dev"
+}
