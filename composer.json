@@ -24,7 +24,7 @@
         "symfony/yaml": "2.1.*"
     },
     "autoload": {
-        "psr-0": { "Publero\\Component\\Test": "Publero/Component/Test/src/" }
+        "psr-0": { "Publero\\Component\\Test": "" }
     },
     "target-dir": "Publero/Component/Test",
     "minimum-stability": "dev"
