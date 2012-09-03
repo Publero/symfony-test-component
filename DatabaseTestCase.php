@@ -26,6 +26,8 @@ abstract class DatabaseTestCase extends ContainerAwareTestCase
 
     public static function tearDownAfterClass()
     {
+        self::$em->close();
+
         static::$doctrine = null;
         static::$em = null;
 
@@ -45,13 +47,11 @@ abstract class DatabaseTestCase extends ContainerAwareTestCase
             $result = parent::runTest();
         } catch (\Exception $e) {
             self::$em->getConnection()->rollback();
-            self::$em->close();
 
             throw $e;
         }
 
         self::$em->getConnection()->rollback();
-        self::$em->close();
 
         return $result;
     }
