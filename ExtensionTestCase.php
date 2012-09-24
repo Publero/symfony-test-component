@@ -35,7 +35,16 @@ abstract class ExtensionTestCase extends \PHPUnit_Framework_TestCase
      */
     public function getParsedConfig()
     {
-        return (new Parser())->parse($this->getConfig());
+        return $this->parseConfig($this->getConfig());
+    }
+
+    /**
+     * @param string $config
+     * @return array
+     */
+    public function parseConfig($config)
+    {
+        return (new Parser())->parse($config);
     }
 
     /**
