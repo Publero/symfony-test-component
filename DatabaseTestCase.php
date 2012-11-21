@@ -52,6 +52,7 @@ abstract class DatabaseTestCase extends ContainerAwareTestCase
         }
 
         self::$em->getConnection()->rollback();
+        self::$em->clear();
 
         return $result;
     }
