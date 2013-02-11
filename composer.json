@@ -19,7 +19,7 @@
         "php": ">=5.4.0",
         "doctrine/doctrine-bundle": "1.0.*",
         "doctrine/orm": ">=2.2,<2.4-dev",
-        "symfony/framework-bundle": "2.1.*",
+        "symfony/framework-bundle": ">=2.1.*",
         "symfony/translation": "2.1.*",
         "symfony/yaml": "2.1.*"
     },
