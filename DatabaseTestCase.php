@@ -21,7 +21,7 @@ abstract class DatabaseTestCase extends ContainerAwareTestCase
         parent::setUpBeforeClass();
 
         static::$doctrine = static::getContainer()->get('doctrine');
-        static::$em = static::$doctrine->getEntityManager();
+        static::$em = static::$doctrine->getManager();
     }
 
     public static function tearDownAfterClass()
@@ -38,7 +38,8 @@ abstract class DatabaseTestCase extends ContainerAwareTestCase
      * Runs a test in transaction and rolls back changes after the test is completed.
      *
      * @return mixed
-     * @throws RuntimeException
+     * @throws \Doctrine\DBAL\ConnectionException
+     * @throws \Exception
      */
     protected function runTest()
     {
